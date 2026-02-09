@@ -23,10 +23,6 @@
     "rules": "storage.rules"
   },
   "emulators": {
-    "apphosting": {
-      "port": 8080,
-      "rootDirectory": "./"
-    },
     "auth": {
       "port": 8081
     },

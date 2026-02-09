@@ -1,38 +1,36 @@
-[debug] [2026-02-09T12:16:23.105Z] ----------------------------------------------------------------------
-[debug] [2026-02-09T12:16:23.115Z] Command:       /usr/bin/node /usr/local/bin/firebase emulators:start
-[debug] [2026-02-09T12:16:23.116Z] CLI Version:   15.5.1
-[debug] [2026-02-09T12:16:23.117Z] Platform:      linux
-[debug] [2026-02-09T12:16:23.117Z] Node Version:  v22.22.0
-[debug] [2026-02-09T12:16:23.118Z] Time:          Mon Feb 09 2026 13:16:23 GMT+0100 (heure normale d’Europe centrale)
-[debug] [2026-02-09T12:16:23.119Z] ----------------------------------------------------------------------
+[debug] [2026-02-09T12:21:15.041Z] ----------------------------------------------------------------------
+[debug] [2026-02-09T12:21:15.049Z] Command:       /usr/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2026-02-09T12:21:15.051Z] CLI Version:   15.5.1
+[debug] [2026-02-09T12:21:15.051Z] Platform:      linux
+[debug] [2026-02-09T12:21:15.052Z] Node Version:  v22.22.0
+[debug] [2026-02-09T12:21:15.053Z] Time:          Mon Feb 09 2026 13:21:15 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2026-02-09T12:21:15.053Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2026-02-09T12:16:25.992Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2026-02-09T12:16:25.993Z] > authorizing via signed-in user (raoul.teida@gmail.com)
-[debug] [2026-02-09T12:16:26.066Z] openjdk version "21.0.10" 2026-01-20
-
-[debug] [2026-02-09T12:16:26.067Z] OpenJDK Runtime Environment (build 21.0.10+7-Debian-1)
+[debug] [2026-02-09T12:21:17.572Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-09T12:21:17.573Z] > authorizing via signed-in user (raoul.teida@gmail.com)
+[debug] [2026-02-09T12:21:17.654Z] openjdk version "21.0.10" 2026-01-20
+OpenJDK Runtime Environment (build 21.0.10+7-Debian-1)
 OpenJDK 64-Bit Server VM (build 21.0.10+7-Debian-1, mixed mode, sharing)
 
-[debug] [2026-02-09T12:16:26.075Z] Parsed Java major version: 21
-[info] i  emulators: Starting emulators: apphosting, auth, firestore, hosting, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: apphosting, auth, firestore, hosting, storage"}}
-[debug] [2026-02-09T12:16:26.099Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2026-02-09T12:16:26.100Z] [apphosting] App Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2026-02-09T12:16:26.100Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2026-02-09T12:16:26.100Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2026-02-09T12:16:26.101Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2026-02-09T12:16:26.101Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2026-02-09T12:16:26.102Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2026-02-09T12:16:26.102Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8085},{"address":"::1","family":"IPv6","port":8085}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"apphosting":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8082}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":8083}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":8084}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2026-02-09T12:16:26.134Z] Write emulator hub locator at /tmp/hub-todolist-with-em.json
-[debug] [2026-02-09T12:16:26.166Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2026-02-09T12:16:26.167Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2026-02-09T12:16:26.167Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/home/teida/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar","--host","127.0.0.1","--port",8082,"--websocket_port",9150,"--project_id","todolist-with-em","--rules","/home/teida/workspace/web/todo_list/firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8082} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/home/teida/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8082,\"--websocket_port\",9150,\"--project_id\",\"todolist-with-em\",\"--rules\",\"/home/teida/workspace/web/todo_list/firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8082}"}}
+[debug] [2026-02-09T12:21:17.662Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, firestore, hosting, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, firestore, hosting, storage"}}
+[debug] [2026-02-09T12:21:17.692Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-09T12:21:17.693Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-09T12:21:17.694Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-09T12:21:17.694Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-09T12:21:17.695Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-09T12:21:17.695Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-09T12:21:17.696Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8085},{"address":"::1","family":"IPv6","port":8085}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8082}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":8083}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":8084}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-02-09T12:21:17.724Z] Write emulator hub locator at /tmp/hub-todolist-with-em.json
+[debug] [2026-02-09T12:21:17.756Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-09T12:21:17.757Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2026-02-09T12:21:17.758Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/home/teida/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar","--host","127.0.0.1","--port",8082,"--websocket_port",9150,"--project_id","todolist-with-em","--rules","/home/teida/workspace/web/todo_list/firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8082} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/home/teida/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8082,\"--websocket_port\",9150,\"--project_id\",\"todolist-with-em\",\"--rules\",\"/home/teida/workspace/web/todo_list/firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8082}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2026-02-09T12:16:29.113Z] Feb 09, 2026 1:16:28 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2026-02-09T12:21:20.713Z] Feb 09, 2026 1:21:20 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 09, 2026 1:16:28 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
-[debug] [2026-02-09T12:16:29.190Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2026-02-09T12:16:29.191Z] 127.0.0.1:8082
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 09, 2026 1:21:20 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2026-02-09T12:21:20.786Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2026-02-09T12:21:20.787Z] 127.0.0.1:8082
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8082
@@ -46,23 +44,196 @@ Dev App Server is now running.
 
  {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8082\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8082\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8082\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
 [info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2026-02-09T12:16:44.996Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2026-02-09T12:16:46.917Z] Temp file directory for storage emulator: /tmp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /tmp/firebase/storage/blobs"}}
-[debug] [2026-02-09T12:16:46.936Z] Checked if tokens are valid: true, expires at: 1770642829605
-[debug] [2026-02-09T12:16:46.937Z] Checked if tokens are valid: true, expires at: 1770642829605
-[debug] [2026-02-09T12:16:46.943Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/todolist-with-em/sites 
-[debug] [2026-02-09T12:16:48.070Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/todolist-with-em/sites 200
-[debug] [2026-02-09T12:16:48.071Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/todolist-with-em/sites {"sites":[{"name":"projects/todolist-with-em/sites/todolist-with-em","defaultUrl":"https://todolist-with-em.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2026-02-09T12:16:48.071Z] Checked if tokens are valid: true, expires at: 1770642829605
-[debug] [2026-02-09T12:16:48.071Z] Checked if tokens are valid: true, expires at: 1770642829605
-[debug] [2026-02-09T12:16:48.072Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em/webApps/-/config [none]
-[debug] [2026-02-09T12:16:49.068Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em/webApps/-/config 200
-[debug] [2026-02-09T12:16:49.068Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em/webApps/-/config {"projectId":"todolist-with-em","storageBucket":"todolist-with-em.firebasestorage.app","apiKey":"AIzaSyChUa7JChkHl0d-dIQGocXciiR10qIJLUA","authDomain":"todolist-with-em.firebaseapp.com","messagingSenderId":"73518725645","projectNumber":"73518725645","version":"2"}
-[debug] [2026-02-09T12:16:49.082Z] Checked if tokens are valid: true, expires at: 1770642829605
-[debug] [2026-02-09T12:16:49.082Z] Checked if tokens are valid: true, expires at: 1770642829605
-[debug] [2026-02-09T12:16:49.084Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em [none]
-[debug] [2026-02-09T12:16:49.534Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em 200
-[debug] [2026-02-09T12:16:49.534Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em {"projectId":"todolist-with-em","projectNumber":"73518725645","displayName":"todolist-with-em","name":"projects/todolist-with-em","resources":{"hostingSite":"todolist-with-em"},"state":"ACTIVE","etag":"1_2b5cd664-b931-44e8-a805-e8cc289a71bb"}
+[debug] [2026-02-09T12:21:38.664Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-02-09T12:21:40.535Z] Temp file directory for storage emulator: /tmp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /tmp/firebase/storage/blobs"}}
+[debug] [2026-02-09T12:21:40.553Z] Checked if tokens are valid: true, expires at: 1770642829605
+[debug] [2026-02-09T12:21:40.554Z] Checked if tokens are valid: true, expires at: 1770642829605
+[debug] [2026-02-09T12:21:40.560Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/todolist-with-em/sites 
+[debug] [2026-02-09T12:21:41.784Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/todolist-with-em/sites 200
+[debug] [2026-02-09T12:21:41.784Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/todolist-with-em/sites {"sites":[{"name":"projects/todolist-with-em/sites/todolist-with-em","defaultUrl":"https://todolist-with-em.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-02-09T12:21:41.785Z] Checked if tokens are valid: true, expires at: 1770642829605
+[debug] [2026-02-09T12:21:41.786Z] Checked if tokens are valid: true, expires at: 1770642829605
+[debug] [2026-02-09T12:21:41.786Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em/webApps/-/config [none]
+[debug] [2026-02-09T12:21:42.872Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em/webApps/-/config 200
+[debug] [2026-02-09T12:21:42.872Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em/webApps/-/config {"projectId":"todolist-with-em","storageBucket":"todolist-with-em.firebasestorage.app","apiKey":"AIzaSyChUa7JChkHl0d-dIQGocXciiR10qIJLUA","authDomain":"todolist-with-em.firebaseapp.com","messagingSenderId":"73518725645","projectNumber":"73518725645","version":"2"}
+[debug] [2026-02-09T12:21:42.889Z] Checked if tokens are valid: true, expires at: 1770642829605
+[debug] [2026-02-09T12:21:42.890Z] Checked if tokens are valid: true, expires at: 1770642829605
+[debug] [2026-02-09T12:21:42.891Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em [none]
+[debug] [2026-02-09T12:21:43.187Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em 200
+[debug] [2026-02-09T12:21:43.188Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todolist-with-em {"projectId":"todolist-with-em","projectNumber":"73518725645","displayName":"todolist-with-em","name":"projects/todolist-with-em","resources":{"hostingSite":"todolist-with-em"},"state":"ACTIVE","etag":"1_2b5cd664-b931-44e8-a805-e8cc289a71bb"}
 [info] i  hosting[todolist-with-em]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
 [info] ✔  hosting[todolist-with-em]: Local server: http://127.0.0.1:8083 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:8083\u001b[22m\u001b[24m"}}
-[info] i  apphosting: starting app with: 'npm run dev' {"metadata":{"emulator":{"name":"apphosting"},"message":"starting app with: 'npm run dev'"}}
+[info] i  ui: downloading ui-v1.15.0.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.15.0.zip..."}}
+[debug] [2026-02-09T12:21:43.266Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 
+[debug] [2026-02-09T12:21:43.527Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 200
+[debug] [2026-02-09T12:21:43.527Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip [stream]
+[debug] [2026-02-09T12:21:44.669Z] Data is 3538469
+[debug] [2026-02-09T12:21:44.670Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-02-09T12:21:44.671Z] [unzip] Processing entry: client/
+[debug] [2026-02-09T12:21:44.671Z] [unzip] mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/
+[debug] [2026-02-09T12:21:44.674Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=293 bytes, uncompressed_size=293 bytes)
+[debug] [2026-02-09T12:21:44.674Z] [unzip] Processing entry: client/favicon-16x16.png
+[debug] [2026-02-09T12:21:44.674Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.675Z] [unzip] Writing file: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/favicon-16x16.png
+[debug] [2026-02-09T12:21:44.678Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=1433 bytes, uncompressed_size=2611 bytes)
+[debug] [2026-02-09T12:21:44.679Z] [unzip] Processing entry: client/safari-pinned-tab.svg
+[debug] [2026-02-09T12:21:44.679Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.680Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/safari-pinned-tab.svg
+[debug] [2026-02-09T12:21:44.699Z] [unzip] Entry: client/favicon.ico (compressed_size=2933 bytes, uncompressed_size=13294 bytes)
+[debug] [2026-02-09T12:21:44.700Z] [unzip] Processing entry: client/favicon.ico
+[debug] [2026-02-09T12:21:44.700Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.701Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/favicon.ico
+[debug] [2026-02-09T12:21:44.706Z] [unzip] Entry: client/index.html (compressed_size=1364 bytes, uncompressed_size=3071 bytes)
+[debug] [2026-02-09T12:21:44.707Z] [unzip] Processing entry: client/index.html
+[debug] [2026-02-09T12:21:44.707Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.708Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/index.html
+[debug] [2026-02-09T12:21:44.711Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=2684 bytes, uncompressed_size=2684 bytes)
+[debug] [2026-02-09T12:21:44.712Z] [unzip] Processing entry: client/android-chrome-192x192.png
+[debug] [2026-02-09T12:21:44.712Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.713Z] [unzip] Writing file: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/android-chrome-192x192.png
+[debug] [2026-02-09T12:21:44.714Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=2123 bytes, uncompressed_size=2152 bytes)
+[debug] [2026-02-09T12:21:44.714Z] [unzip] Processing entry: client/apple-touch-icon.png
+[debug] [2026-02-09T12:21:44.715Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.715Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/apple-touch-icon.png
+[debug] [2026-02-09T12:21:44.718Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=5369 bytes, uncompressed_size=5411 bytes)
+[debug] [2026-02-09T12:21:44.719Z] [unzip] Processing entry: client/android-chrome-512x512.png
+[debug] [2026-02-09T12:21:44.719Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.719Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/android-chrome-512x512.png
+[debug] [2026-02-09T12:21:44.723Z] [unzip] Entry: client/manifest.json (compressed_size=245 bytes, uncompressed_size=551 bytes)
+[debug] [2026-02-09T12:21:44.723Z] [unzip] Processing entry: client/manifest.json
+[debug] [2026-02-09T12:21:44.724Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.725Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/manifest.json
+[debug] [2026-02-09T12:21:44.729Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2026-02-09T12:21:44.729Z] [unzip] Processing entry: client/robots.txt
+[debug] [2026-02-09T12:21:44.729Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.730Z] [unzip] Writing file: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/robots.txt
+[debug] [2026-02-09T12:21:44.731Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=2034 bytes, uncompressed_size=2034 bytes)
+[debug] [2026-02-09T12:21:44.732Z] [unzip] Processing entry: client/mstile-150x150.png
+[debug] [2026-02-09T12:21:44.732Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:44.733Z] [unzip] Writing file: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/mstile-150x150.png
+[debug] [2026-02-09T12:21:44.734Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-02-09T12:21:44.734Z] [unzip] Processing entry: client/assets/
+[debug] [2026-02-09T12:21:44.734Z] [unzip] mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/
+[debug] [2026-02-09T12:21:44.735Z] [unzip] Entry: client/assets/index-BX-A56oj.js (compressed_size=582089 bytes, uncompressed_size=2092775 bytes)
+[debug] [2026-02-09T12:21:44.735Z] [unzip] Processing entry: client/assets/index-BX-A56oj.js
+[debug] [2026-02-09T12:21:44.736Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2026-02-09T12:21:44.736Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-BX-A56oj.js
+[debug] [2026-02-09T12:21:44.811Z] [unzip] Entry: client/assets/index-CjB9C900.css (compressed_size=35979 bytes, uncompressed_size=298654 bytes)
+[debug] [2026-02-09T12:21:44.811Z] [unzip] Processing entry: client/assets/index-CjB9C900.css
+[debug] [2026-02-09T12:21:44.811Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2026-02-09T12:21:44.812Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-CjB9C900.css
+[debug] [2026-02-09T12:21:44.822Z] [unzip] Entry: client/assets/index-BX-A56oj.js.map (compressed_size=2362482 bytes, uncompressed_size=10036679 bytes)
+[debug] [2026-02-09T12:21:44.822Z] [unzip] Processing entry: client/assets/index-BX-A56oj.js.map
+[debug] [2026-02-09T12:21:44.822Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2026-02-09T12:21:44.823Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-BX-A56oj.js.map
+[debug] [2026-02-09T12:21:45.105Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-02-09T12:21:45.105Z] [unzip] Processing entry: client/assets/extensions/
+[debug] [2026-02-09T12:21:45.105Z] [unzip] mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions/
+[debug] [2026-02-09T12:21:45.106Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2026-02-09T12:21:45.106Z] [unzip] Processing entry: client/assets/extensions/default-extension.png
+[debug] [2026-02-09T12:21:45.106Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions
+[debug] [2026-02-09T12:21:45.107Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions/default-extension.png
+[debug] [2026-02-09T12:21:45.110Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-02-09T12:21:45.111Z] [unzip] Processing entry: client/assets/img/
+[debug] [2026-02-09T12:21:45.111Z] [unzip] mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/img/
+[debug] [2026-02-09T12:21:45.112Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2026-02-09T12:21:45.112Z] [unzip] Processing entry: client/assets/img/database.png
+[debug] [2026-02-09T12:21:45.112Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/img
+[debug] [2026-02-09T12:21:45.112Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/img/database.png
+[debug] [2026-02-09T12:21:45.116Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-02-09T12:21:45.116Z] [unzip] Processing entry: client/assets/provider-icons/
+[debug] [2026-02-09T12:21:45.116Z] [unzip] mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/
+[debug] [2026-02-09T12:21:45.117Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2026-02-09T12:21:45.117Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_saml.svg
+[debug] [2026-02-09T12:21:45.117Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.118Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_saml.svg
+[debug] [2026-02-09T12:21:45.120Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2026-02-09T12:21:45.121Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_phone.svg
+[debug] [2026-02-09T12:21:45.121Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.121Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_phone.svg
+[debug] [2026-02-09T12:21:45.124Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2026-02-09T12:21:45.124Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2026-02-09T12:21:45.124Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.125Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2026-02-09T12:21:45.128Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2026-02-09T12:21:45.128Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2026-02-09T12:21:45.129Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.129Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2026-02-09T12:21:45.132Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2026-02-09T12:21:45.132Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_apple.svg
+[debug] [2026-02-09T12:21:45.133Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.133Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_apple.svg
+[debug] [2026-02-09T12:21:45.136Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2026-02-09T12:21:45.136Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_github.svg
+[debug] [2026-02-09T12:21:45.136Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.137Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_github.svg
+[debug] [2026-02-09T12:21:45.139Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2026-02-09T12:21:45.139Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2026-02-09T12:21:45.139Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.140Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2026-02-09T12:21:45.143Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2026-02-09T12:21:45.143Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2026-02-09T12:21:45.143Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.144Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2026-02-09T12:21:45.147Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2026-02-09T12:21:45.148Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2026-02-09T12:21:45.148Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.149Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2026-02-09T12:21:45.151Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2026-02-09T12:21:45.152Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2026-02-09T12:21:45.152Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.153Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2026-02-09T12:21:45.156Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2026-02-09T12:21:45.156Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_email.svg
+[debug] [2026-02-09T12:21:45.156Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.157Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_email.svg
+[debug] [2026-02-09T12:21:45.160Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2026-02-09T12:21:45.160Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_google.svg
+[debug] [2026-02-09T12:21:45.160Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.161Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_google.svg
+[debug] [2026-02-09T12:21:45.163Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2026-02-09T12:21:45.163Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2026-02-09T12:21:45.164Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-02-09T12:21:45.164Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2026-02-09T12:21:45.166Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2026-02-09T12:21:45.167Z] [unzip] Processing entry: client/browserconfig.xml
+[debug] [2026-02-09T12:21:45.167Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:45.167Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/browserconfig.xml
+[debug] [2026-02-09T12:21:45.170Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=475 bytes, uncompressed_size=475 bytes)
+[debug] [2026-02-09T12:21:45.170Z] [unzip] Processing entry: client/favicon-32x32.png
+[debug] [2026-02-09T12:21:45.170Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-02-09T12:21:45.171Z] [unzip] Writing file: /home/teida/.cache/firebase/emulators/ui-v1.15.0/client/favicon-32x32.png
+[debug] [2026-02-09T12:21:45.172Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-02-09T12:21:45.172Z] [unzip] Processing entry: server/
+[debug] [2026-02-09T12:21:45.172Z] [unzip] mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/server/
+[debug] [2026-02-09T12:21:45.173Z] [unzip] Entry: server/server.mjs.map (compressed_size=217845 bytes, uncompressed_size=944978 bytes)
+[debug] [2026-02-09T12:21:45.173Z] [unzip] Processing entry: server/server.mjs.map
+[debug] [2026-02-09T12:21:45.173Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/server
+[debug] [2026-02-09T12:21:45.174Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/server/server.mjs.map
+[debug] [2026-02-09T12:21:45.203Z] [unzip] Entry: server/server.mjs (compressed_size=276407 bytes, uncompressed_size=933701 bytes)
+[debug] [2026-02-09T12:21:45.203Z] [unzip] Processing entry: server/server.mjs
+[debug] [2026-02-09T12:21:45.204Z] [unzip] else mkdir: /home/teida/.cache/firebase/emulators/ui-v1.15.0/server
+[debug] [2026-02-09T12:21:45.204Z] [unzip] deflating: /home/teida/.cache/firebase/emulators/ui-v1.15.0/server/server.mjs
+[debug] [2026-02-09T12:21:45.252Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:8085/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:8081 │ http://127.0.0.1:8085/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8082 │ http://127.0.0.1:8085/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:8083 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ 127.0.0.1:8084 │ http://127.0.0.1:8085/storage   │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
