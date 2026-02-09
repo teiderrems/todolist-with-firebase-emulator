@@ -7,6 +7,7 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { environment } from '../../environments';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -23,18 +24,18 @@ export const appConfig: ApplicationConfig = {
 
     provideAuth(() => {
       const auth = getAuth();
-      connectAuthEmulator(auth, 'http://localhost:8081');
+      environment.useEmulators?connectAuthEmulator(auth, 'http://localhost:8081'):undefined;
       return auth;
     }),
 
     provideFirestore(() => {
       const firestore = getFirestore();
-      connectFirestoreEmulator(firestore, 'localhost', 8082);
+      environment.useEmulators?connectFirestoreEmulator(firestore, 'localhost', 8082):undefined;
       return firestore;
     }),
     provideStorage(() => {
       const storage = getStorage();
-      connectStorageEmulator(storage, 'localhost', 8084);
+      environment.useEmulators?connectStorageEmulator(storage, 'localhost', 8084):undefined;
       return storage;
     })
   ]
