@@ -19,26 +19,29 @@
       }
     ]
   },
+  "storage": {
+    "rules": "storage.rules"
+  },
   "emulators": {
     "apphosting": {
       "port": 8080,
       "rootDirectory": "./"
     },
     "auth": {
-      "port": 8000
+      "port": 8081
     },
     "firestore": {
-      "port": 8080
+      "port": 8082
     },
     "hosting": {
-      "port": 5000
+      "port": 8083
     },
     "storage": {
-      "port": 8080
+      "port": 8084
     },
     "ui": {
       "enabled": true,
-      "port": 8080
+      "port": 8085
     },
     "singleProjectMode": true
   }
