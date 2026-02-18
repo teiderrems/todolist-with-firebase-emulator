@@ -1,6 +1,6 @@
 import { Component, EventEmitter, effect, inject, input, Output } from '@angular/core';
 import { Task } from '../../../types';
-import { ReactiveFormsModule,FormGroup,FormControl } from '@angular/forms';
+import { ReactiveFormsModule,FormGroup,FormControl, Validators } from '@angular/forms';
 import { TaskService } from '../../pages/task/task.service';
 
 @Component({
@@ -23,7 +23,7 @@ export class TaskForm {
   is_edit_mode = input<boolean>(false);
 
   taskForm = new FormGroup({
-    title: new FormControl(this.currentTask()?.title || ''),
+    title: new FormControl(this.currentTask()?.title || '',[Validators.required,Validators.minLength(2)]),
     description: new FormControl(this.currentTask()?.description || ''),
     completed: new FormControl(this.currentTask()?.completed || false),
   });
@@ -47,6 +47,10 @@ export class TaskForm {
   }
 
   async onSubmit() {
+    if (this.taskForm.invalid) {
+      console.log('Form is invalid:', this.taskForm.errors);
+      return;
+    }
     const taskData = this.taskForm.value;
 
     // Prefer update when we have an id (more robust than relying only on the edit flag)

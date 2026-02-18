@@ -1,33 +1,33 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { Firestore } from '@angular/fire/firestore';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { AuthService } from './pages/auth/auth.service';
 import { ToastComponent } from './shared/toast.component';
 import { ConfirmDialogComponent } from './shared/confirm-dialog.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ToastComponent, ConfirmDialogComponent],
+  imports: [RouterOutlet, RouterLink, ToastComponent, ConfirmDialogComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
 })
-export class App {
+export class App implements OnInit, OnDestroy {
   protected readonly title = signal('todo_list');
-  // private readonly auth = inject(Auth);
-  // private readonly firestore = inject(Firestore);
+  isScrolled = signal(false);
 
-  // constructor() {
-  //     console.log('Auth Emulator Config:', this.auth);
-  //     console.log('firestore Emulator Config:', this.firestore);
-  // }
+  private onScroll = () => this.isScrolled.set(window.scrollY > 6);
 
-  // ngOnInit() {
-  //   this.authService.login('ghizlane@gmail.com', 'rems2001').then((data) => {
-  //     console.log('Login successful:', data);
-  //   }).catch((error) => {
-  //     console.error('Login failed:', error);
-  //   });
-  //   console.log('Auth Emulator Config:', this.auth);
-  // }
+  ngOnInit() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', this.onScroll, { passive: true });
+      this.onScroll();
+    }
+  }
+
+  ngOnDestroy() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('scroll', this.onScroll);
+    }
+  }
 }

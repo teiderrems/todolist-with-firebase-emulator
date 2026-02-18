@@ -11,9 +11,8 @@
   max-width: 600px;
   margin: 2rem auto;
 
-  /* make the task page itself scrollable so header+form can stay sticky */
-  max-height: calc(100vh - 4rem);
-  overflow: auto;
+  /* allow the document (body) to handle scrolling to avoid nested scrollbars */
+  /* remove max-height/overflow to prevent a second scrollbar */
 }
 
 /* Controls (header + form) — sticky */
@@ -27,6 +26,17 @@
   border-radius: calc(var(--border-radius) - 0.125rem);
   /* subtle separator when sticky */
   box-shadow: 0 6px 16px rgba(2,6,23,0.03);
+  transition: box-shadow 180ms ease, transform 180ms ease, background 180ms ease;
+  will-change: transform, box-shadow, background;
+}
+
+.task-controls--stuck {
+  /* stronger shadow + gentle lift + slight scale to emphasize the fixed state */
+  box-shadow: 0 20px 60px rgba(2,6,23,0.18);
+  transform: translateY(-4px) scale(1.007);
+  background: linear-gradient(180deg, rgba(255,255,255,1), rgba(249,250,251,1));
+  border-bottom: 1px solid rgba(2,6,23,0.04);
+  backdrop-filter: saturate(1.05) blur(4px);
 }
 
 /* Task list becomes the scrollable content inside the page */

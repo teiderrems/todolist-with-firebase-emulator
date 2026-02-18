@@ -1,4 +1,4 @@
-import { Component, computed, effect, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, effect, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { TaskHeader } from "../../components/task-header/task-header";
 import { TaskForm } from "../../components/task-form/task-form";
 import { TaskItem } from "../../components/task-item/task-item";
@@ -25,6 +25,19 @@ export class TaskComponent implements OnInit {
 
   selectedTask = signal<Task | undefined>(undefined);
   isEditMode = signal(false);
+  isSticky = signal(false);
+
+  // scroll handler bound to instance so we can add/remove listener safely
+  private onScroll = () => {
+    const el = document.querySelector('.task-controls') as HTMLElement | null;
+    if (!el) {
+      this.isSticky.set(false);
+      return;
+    }
+    // consider stuck when the controls reach near the viewport top
+    const stuck = el.getBoundingClientRect().top <= 8;
+    this.isSticky.set(stuck);
+  };
 
   constructor() {
     console.log('TaskComponent initialized');
@@ -57,6 +70,19 @@ export class TaskComponent implements OnInit {
       });
     } catch (error) {
       console.error('Error subscribing to tasks:', error);
+    }
+
+    // listen to scroll to toggle sticky shadow
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', this.onScroll, { passive: true });
+      // evaluate initial state
+      requestAnimationFrame(() => this.onScroll());
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('scroll', this.onScroll);
     }
   }
 

@@ -1,8 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
-import { TaskService } from '../../pages/task/task.service';
 
 @Component({
-  selector: 'app-task-header',
+  selector: 'task-header',
   imports: [],
   templateUrl: './task-header.html',
   styleUrl: './task-header.css',

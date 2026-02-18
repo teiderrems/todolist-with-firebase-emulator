@@ -1,6 +1,6 @@
 <div class="task-page">
-  <div class="task-controls">
-    <app-task-header [completedTasksCount]="completedTasksCount()" [totalTasksCount]="totalTasksCount()"></app-task-header>
+  <div class="task-controls" [class.task-controls--stuck]="isSticky()">
+    <task-header [completedTasksCount]="completedTasksCount()" [totalTasksCount]="totalTasksCount()"></task-header>
     <app-task-form [currentTask]="selectedTask()" [is_edit_mode]="isEditMode()" (saved)="onTaskSaved($event)"></app-task-form>
   </div>
 
